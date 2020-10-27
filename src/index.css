@@ -5,18 +5,83 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image:url('./nasa.jpg');
+  background-image: url("./nasa.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-img{
-  width:60%;
+img {
+  width: 60%;
   margin: 0 auto;
+}
+
+h1 {
+  margin: 0 auto;
+  border-radius: 2.5rem;
+  background-color: #0b3d91;
+  color: white;
+  padding: 1.5rem;
+  border: 1px solid #fc3d21;
+  box-shadow: 8px 12px #fc3d21;
+  text-align: center;
+  text-shadow: 4px 4px 8px #fc3d21;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0 auto;
+  border-radius: 2.5rem;
+  background-color: #0b3d91;
+  color: white;
+  padding: 2rem;
+  border: 1px solid #fc3d21;
+  box-shadow: 8px 12px #fc3d21;
+  text-align: center;
+  text-shadow: 4px 4px 8px #fc3d21;
+  font-size: 2.5rem;
+}
+
+.contentDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#images {
+  width: 45%;
+  height: auto;
+  padding: 2rem;
+  background-color: #0b3d91;
+  border-radius: 2.5rem;
+  border: 1px solid #fc3d21;
+  box-shadow: 8px 12px #fc3d21;
+  margin: 0 auto;
+  height: auto;
+}
+#nasaLogo {
+  height: 30vh;
+  width: auto;
+}
+
+.topContent {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+
+.about {
+  width: 45%;
+  padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2.5rem;
+  background-color: #0b3d91;
+  color: white;
+  border: 1px solid #fc3d21;
+  box-shadow: 8px 12px #fc3d21;
+  text-align: center;
+  text-shadow: 4px 4px 8px #fc3d21;
+  font-size: 1.4rem;
 }
