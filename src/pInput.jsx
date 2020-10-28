@@ -11,12 +11,10 @@ const StyledPinput = styled.p`
   text-align: center;
   text-shadow: 4px 4px 8px #fc3d21;
   width: 20%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem;
   border-radius: 2.5rem;
-  input {
-  }
+  position: relative;
+  margin: auto;
+  padding: 0.6rem;
 `;
 
 export default StyledPinput;
