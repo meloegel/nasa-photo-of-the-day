@@ -14,7 +14,7 @@ function App() {
   const momentDate = moment().format('YYYY-MM-DD')
 
   const [potd, setPotd] = useState(1)
-  const [date, setDate] = useState('')
+  const [date, setDate] = useState(momentDate)
 
   const inputNewDate = event => {
     setDate(event.target.value)
