@@ -24,10 +24,10 @@ h1 {
   color: white;
   padding: 1.5rem;
   border: 1px solid #fc3d21;
-  box-shadow: 8px 12px #fc3d21;
+  box-shadow: 8px 8px #fc3d21;
   text-align: center;
   text-shadow: 4px 4px 8px #fc3d21;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 h2 {
@@ -35,12 +35,13 @@ h2 {
   border-radius: 2.5rem;
   background-color: #0b3d91;
   color: white;
-  padding: 2rem;
+  padding: 1rem;
   border: 1px solid #fc3d21;
-  box-shadow: 8px 12px #fc3d21;
+  box-shadow: 8px 8px #fc3d21;
   text-align: center;
   text-shadow: 4px 4px 8px #fc3d21;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  width: 50%;
 }
 
 .contentDiv {
@@ -50,42 +51,67 @@ h2 {
 }
 
 #images {
-  width: 45%;
-  height: auto;
-  padding: 2rem;
+  /* width: 80%; */
+  height: 55vh;
+  width: auto;
+  max-width: 95%;
+  padding: 1.2rem;
   background-color: #0b3d91;
   border-radius: 2.5rem;
   border: 1px solid #fc3d21;
-  box-shadow: 8px 12px #fc3d21;
+  box-shadow: 8px 8px #fc3d21;
   margin: 0 auto;
-  height: auto;
 }
 #nasaLogo {
-  height: 30vh;
+  height: 25vh;
   width: auto;
+  border: 2px solid black;
 }
 
 .topContent {
   display: flex;
   align-items: center;
-  padding: 2rem;
+  padding: 0.8rem;
+  border: 2px solid black;
+}
+.bottomContent {
+  width: 49%;
+  display: flex;
+  border: 2px solid black;
+  /* height: 500px; */
 }
 
 .about {
-  width: 45%;
-  padding: 2rem;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  padding: 1.2rem;
+  margin: auto;
   border-radius: 2.5rem;
   background-color: #0b3d91;
   color: white;
   border: 1px solid #fc3d21;
-  box-shadow: 8px 12px #fc3d21;
+  box-shadow: 8px 8px #fc3d21;
   text-align: center;
   text-shadow: 4px 4px 8px #fc3d21;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 input {
   text-align: center;
   margin: 0 auto;
+}
+.titleDate {
+  width: 100%;
+  border: 2px solid black;
+}
+#dateFormat {
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  border: 2px solid black;
+}
+.toolTip {
+  display: none;
+}
+h1:hover .toolTip {
+  display: inline-block;
+  padding-right: 1rem;
+  text-decoration: underline;
 }

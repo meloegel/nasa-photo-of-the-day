@@ -37,19 +37,30 @@ function App() {
   return (
 
     <div className="App">
-      <img src={nasaLogo} alt='nasa-logo' id='nasaLogo' />
+
       <div className='topContent'>
-        <h1>{potd.title}</h1>
-        <StyledPinput>Date:<input type='date' value={date} onChange={inputNewDate} style={inputStyle} /></StyledPinput>
-        <h2>{potd.date}</h2>
+        <div className='titleDate'>
+          <h1><span className='toolTip'>Title:</span>{potd.title}</h1>
+        </div>
+        <div className='titleDate'>
+          <img src={nasaLogo} alt='nasa-logo' id='nasaLogo' />
+          <StyledPinput>Date:<input type='date' value={date} onChange={inputNewDate} style={inputStyle} /></StyledPinput>
+        </div>
+        <div className='titleDate'>
+          <h2>{potd.date}<br></br><span id='dateFormat'>*YYYY-MM-DD*</span></h2>
+        </div>
       </div>
       <div className='contentDiv'>
-        {potd.media_type === 'video' ? (
-          <ReactPlayer width="45%" height="auto" controls='autoPlay' url={potd.url} alt={potd.title} />
-        ) : (
-            <img id='images' src={potd.url} alt={potd.title} />
-          )}
-        <p className='about'>{potd.explanation} </p>
+        <div className='bottomContent'>
+          {potd.media_type === 'video' ? (
+            <ReactPlayer width="100%" height="auto" controls='autoPlay' url={potd.url} alt={potd.title} />
+          ) : (
+              <img id='images' src={potd.url} alt={potd.title} />
+            )}
+        </div>
+        <div className='bottomContent'>
+          <p className='about'>{potd.explanation} </p>
+        </div>
       </div>
     </div>
   );
