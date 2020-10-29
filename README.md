@@ -17,7 +17,7 @@ This project was originally given to me by Lambda school and the assignment was 
 
 ## Code Snippets
 
-#### Here is the implementation of ReactPlayer and also the conditonal rendering of a photo of viedo.
+#### Here is the implementation of ReactPlayer and also the conditional rendering of a photo of video.
 
 [<img src="./src/ReactPlayer.PNG" width = "800" />]
 
