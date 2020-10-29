@@ -4,7 +4,7 @@ import axios from 'axios';
 import { BASE_URL, API_KEY } from './constants';
 import nasaLogo from './nasa-logo.png';
 import ReactPlayer from "react-player"
-
+import Popup from 'reactjs-popup'
 import StyledPinput from './pInput'
 
 
@@ -15,6 +15,7 @@ function App() {
 
   const [potd, setPotd] = useState(1)
   const [date, setDate] = useState(momentDate)
+  const [isOpen, setIsOpen] = useState(false)
 
   const inputNewDate = event => {
     setDate(event.target.value)
@@ -33,6 +34,9 @@ function App() {
       })
   }, [date])
 
+  const setHD = () => {
+    setIsOpen(!isOpen)
+  }
 
   return (
 
@@ -44,23 +48,31 @@ function App() {
         </div>
         <div className='titleDate'>
           <img src={nasaLogo} alt='nasa-logo' id='nasaLogo' />
-          <StyledPinput>Date:<input type='date' value={date} onChange={inputNewDate} style={inputStyle} /></StyledPinput>
         </div>
         <div className='titleDate'>
-          <h2>{potd.date}<br></br><span id='dateFormat'>*YYYY-MM-DD*</span></h2>
+          <StyledPinput>Date:<input type='date' value={date} onChange={inputNewDate} style={inputStyle} /><span id='dateFormat'><br></br>*MM-DD-YYYY*</span></StyledPinput>
         </div>
       </div>
       <div className='contentDiv'>
         <div className='bottomContent'>
           {potd.media_type === 'video' ? (
-            <ReactPlayer width="100%" height="auto" controls='autoPlay' url={potd.url} alt={potd.title} />
+            <ReactPlayer id='vid' url={potd.url} alt={potd.title} />
           ) : (
-              <img id='images' src={potd.url} alt={potd.title} />
+              <img id='images' onClick={setHD} src={potd.url} alt={potd.title} />
             )}
         </div>
         <div className='bottomContent'>
           <p className='about'>{potd.explanation} </p>
         </div>
+        <Popup open={isOpen} modal>
+          {close => (
+            <div className="modal">
+              <div className="aboutPopupDiv">
+                <img id='hdImage' onClick={() => { close(); setHD(); }} src={potd.hdurl} alt={potd.title} />
+              </div>
+            </div>
+          )}
+        </Popup>
       </div>
     </div>
   );
