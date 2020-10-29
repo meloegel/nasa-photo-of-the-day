@@ -5,8 +5,6 @@ import { BASE_URL, API_KEY } from './constants';
 import nasaLogo from './nasa-logo.png';
 import ReactPlayer from "react-player"
 import Popup from 'reactjs-popup'
-import StyledPinput from './pInput'
-
 
 
 function App() {
@@ -63,7 +61,7 @@ function App() {
           <img src={nasaLogo} alt='nasa-logo' id='nasaLogo' />
         </div>
         <div className='titleDate'>
-          <StyledPinput>Date:<input type='date' value={date} onChange={inputNewDate} style={inputStyle} /><span id='dateFormat'><br></br>*MM-DD-YYYY*</span></StyledPinput>
+          <div id='dateInput'>Date:<input type='date' value={date} onChange={inputNewDate} style={inputStyle} /><span id='dateFormat'><br></br>*MM-DD-YYYY*</span></div>
         </div>
       </div>
       <div className='contentDiv'>
