@@ -200,3 +200,29 @@ h1:hover .toolTip {
   margin: auto;
   padding: 0.8rem;
 }
+
+@media screen and (min-width: 2000px) {
+  .about {
+    font-size: 2rem;
+  }
+  #vid {
+    min-width: 45vw;
+  }
+  .popup-content {
+    width: 61%;
+  }
+  .button {
+    padding: 0.8rem;
+    font-size: 1.4rem;
+  }
+  .aboutPopupContent {
+    padding: 0.2rem;
+    text-align: center;
+    font-size: 2rem;
+  }
+  .aboutTitle {
+    text-align: center;
+    padding: 1rem;
+    font-size: 3.5rem;
+  }
+}
