@@ -41,7 +41,20 @@ function App() {
   return (
 
     <div className="App">
-
+      <Popup trigger={<button className="button"> About </button>} modal>
+        {close => (
+          <div className="aboutModal">
+            <a className="close" onClick={close}>&times;</a>
+            <div className="aboutTitle"> About Nasa Photo of The Day </div>
+            <div className="aboutPopupDiv">
+              <p className='aboutPopupContent'>Nasa Photo of the day was created unsing the Nasa public daily photo api. Each day Nasa will have a different photo or video to display. On this page you can navigate thought photos of the past utilizing the date selection. You can also view the photos in HD by clicking on them, click again to close.</p>
+            </div>
+            <div className="buttonPopup">
+              <button className="buttonClose" onClick={() => { close(); }}>Close</button>
+            </div>
+          </div>
+        )}
+      </Popup>
       <div className='topContent'>
         <div className='titleDate'>
           <h1><span className='toolTip'>Title:</span>{potd.title}</h1>
@@ -56,7 +69,7 @@ function App() {
       <div className='contentDiv'>
         <div className='bottomContent'>
           {potd.media_type === 'video' ? (
-            <ReactPlayer id='vid' url={potd.url} alt={potd.title} />
+            <ReactPlayer id='vid' playing='true' url={potd.url} alt={potd.title} />
           ) : (
               <img id='images' onClick={setHD} src={potd.url} alt={potd.title} />
             )}
@@ -67,7 +80,7 @@ function App() {
         <Popup open={isOpen} modal>
           {close => (
             <div className="modal">
-              <div className="aboutPopupDiv">
+              <div className="hdPopupDiv">
                 <img id='hdImage' onClick={() => { close(); setHD(); }} src={potd.hdurl} alt={potd.title} />
               </div>
             </div>
