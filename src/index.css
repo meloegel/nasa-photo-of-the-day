@@ -201,6 +201,9 @@ h1:hover .toolTip {
   padding: 0.8rem;
 }
 
+#createdBy {
+  text-align: center;
+}
 @media screen and (min-width: 2000px) {
   .about {
     font-size: 2rem;
