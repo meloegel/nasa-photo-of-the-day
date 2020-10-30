@@ -226,3 +226,43 @@ h1:hover .toolTip {
     font-size: 3.5rem;
   }
 }
+
+@media screen and (max-width: 786px) {
+  .topContent {
+    flex-direction: column;
+  }
+  h1 {
+    width: 80%;
+  }
+  .bottomContent {
+    width: 85%;
+    padding: 1rem;
+  }
+  body {
+    height: auto;
+  }
+  .button {
+    position: relative;
+    margin-left: 70%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .topContent {
+    flex-direction: column;
+  }
+  h1 {
+    width: 70%;
+  }
+  .bottomContent {
+    width: 85%;
+    padding: 1rem;
+  }
+  body {
+    height: auto;
+  }
+  .button {
+    position: relative;
+    margin-left: 85%;
+  }
+}
