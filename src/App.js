@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+import "./styles/sass/index.scss";
 import axios from 'axios';
 import { BASE_URL, API_KEY } from './constants';
-import nasaLogo from './nasa-logo.png';
+import nasaLogo from '../src/styles/imgs/nasa-logo.png';
 import ReactPlayer from "react-player"
 import Popup from 'reactjs-popup'
 
