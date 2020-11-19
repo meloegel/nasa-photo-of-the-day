@@ -15,14 +15,21 @@ This project was originally given to me by Lambda school and the assignment was 
 -ReactJS-Popup <br>
 -Reactstrap <br>
 -Axios <br>
+-Sass <br>
 -Styled-Components <br>
+
+## Home Page
+
+## Hd Image
+
+## Video
 
 ## Code Snippets
 
 #### Here is the implementation of ReactPlayer and also the conditional rendering of a photo of video.
 
-[<img src="./src/ReactPlayer.PNG" width = "800" />]
+<img src="./src/styles/imgs/ReactPlayer.PNG" width = "800" />
 
 #### Here is the implementation of ReactJs-Popup used to display the HD photos.
 
-[<img src="./src/Popup.PNG" width = "800" />]
+<img src="./src/styles/imgs/Popup.PNG" width = "800" />
