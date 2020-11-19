@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("./nasa.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+h1 {
+  margin: 0 auto;
+  border-radius: 2.5rem;
+  background-color: #0b3d91;
+  color: white;
+  padding: 1.5rem;
+  border: 1px solid #fc3d21;
+  box-shadow: 8px 8px #fc3d21;
+  text-align: center;
+  text-shadow: 4px 4px 8px #fc3d21;
+  font-size: 1.8rem;
+  width: 25vw;
+}
+input {
+  text-align: center;
+  margin: 0 auto;
+  margin-left: 0.8rem;
+  font-size: large;
+}
+h1:hover .toolTip {
+  display: inline-block;
+  padding-right: 1rem;
+  text-decoration: underline;
+}
+.toolTip {
+  display: none;
+}
+
+@media screen and (max-width: 786px) {
+  body {
+    height: auto;
+  }
+  h1 {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    width: 70%;
+  }
+  body {
+    height: auto;
+  }
+}

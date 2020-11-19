@@ -1,34 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: url("./nasa.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-}
-
-h1 {
-  margin: 0 auto;
-  border-radius: 2.5rem;
-  background-color: #0b3d91;
-  color: white;
-  padding: 1.5rem;
-  border: 1px solid #fc3d21;
-  box-shadow: 8px 8px #fc3d21;
-  text-align: center;
-  text-shadow: 4px 4px 8px #fc3d21;
-  font-size: 1.8rem;
-  width: 25vw;
-}
-
 .contentDiv {
   display: flex;
   flex-wrap: wrap;
@@ -84,25 +53,6 @@ h1 {
   font-size: 1rem;
 }
 
-.about {
-  width: 100%;
-  padding: 1.6rem;
-  margin: auto;
-  border-radius: 2.5rem;
-  background-color: #0b3d91;
-  color: white;
-  border: 1px solid #fc3d21;
-  box-shadow: 8px 8px #fc3d21;
-  text-align: center;
-  text-shadow: 4px 4px 8px #fc3d21;
-  font-size: 1.2rem;
-}
-input {
-  text-align: center;
-  margin: 0 auto;
-  margin-left: 0.8rem;
-  font-size: large;
-}
 .titleDate {
   width: 100%;
 }
@@ -110,58 +60,7 @@ input {
   font-size: 1rem;
   text-align: center;
 }
-.toolTip {
-  display: none;
-}
-h1:hover .toolTip {
-  display: inline-block;
-  padding-right: 1rem;
-  text-decoration: underline;
-}
 
-.modal {
-  background-color: darkgray;
-}
-.aboutModal {
-  background-color: darkgray;
-  margin: 0 auto;
-}
-.aboutPopupContent {
-  width: 83%;
-  margin: 0 auto;
-  padding: 0.2rem;
-  text-align: center;
-}
-.aboutTitle {
-  text-align: center;
-  padding: 1rem;
-}
-
-.hdPopupDiv {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.popup-content {
-  margin: 0 auto;
-  background: darkgray;
-  width: 40%;
-  padding: 5px;
-  font-size: 1.2rem;
-}
-
-.close {
-  color: black;
-  padding: 0.5rem;
-  font-size: 1.5rem;
-}
-.popup-overlay {
-  background: rgba(0, 0, 0, 0.5);
-}
-[data-popup="tooltip"].popup-overlay {
-  background: transparent;
-}
 #hdImage {
   text-align: center;
   margin: 0 auto;
@@ -205,28 +104,12 @@ h1:hover .toolTip {
   text-align: center;
 }
 @media screen and (min-width: 2000px) {
-  .about {
-    font-size: 2rem;
-  }
   #vid {
     min-width: 45vw;
-  }
-  .popup-content {
-    width: 61%;
   }
   .button {
     padding: 0.8rem;
     font-size: 1.4rem;
-  }
-  .aboutPopupContent {
-    padding: 0.2rem;
-    text-align: center;
-    font-size: 2rem;
-  }
-  .aboutTitle {
-    text-align: center;
-    padding: 1rem;
-    font-size: 3.5rem;
   }
 }
 
@@ -234,16 +117,12 @@ h1:hover .toolTip {
   .topContent {
     flex-direction: column;
   }
-  h1 {
-    width: 80%;
-  }
+
   .bottomContent {
     width: 85%;
     padding: 1rem;
   }
-  body {
-    height: auto;
-  }
+
   .button {
     position: relative;
     margin-left: 70%;
@@ -254,16 +133,12 @@ h1:hover .toolTip {
   .topContent {
     flex-direction: column;
   }
-  h1 {
-    width: 70%;
-  }
+
   .bottomContent {
     width: 85%;
     padding: 1rem;
   }
-  body {
-    height: auto;
-  }
+
   .button {
     position: relative;
     margin-left: 85%;
