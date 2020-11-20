@@ -45,7 +45,7 @@ function App() {
             <a className="close" onClick={close}>&times;</a>
             <div className="aboutTitle"> About Nasa Photo of The Day </div>
             <div className="aboutPopupDiv">
-              <p className='aboutPopupContent'>Nasa Photo of the day was created unsing the Nasa public daily photo api. Each day Nasa will have a different photo or video to display. On this page you can navigate thought photos of the past utilizing the date selection. You can also view the photos in HD by clicking on them, click again to close.</p>
+              <p className='aboutPopupContent'>Nasa Photo of the day was created unsing the Nasa public daily photo api. Each day Nasa will have a different photo or video to display. On this page you can navigate thorough photos of the past utilizing the date selection. You can also view the photos in HD by clicking on them, click again to close.</p>
               <p id='createdBy'>Created By: <a target="_blank" href='https://github.com/meloegel/nasa-photo-of-the-day'>Mark Loegel</a></p>
             </div>
             <div className="buttonPopup">
