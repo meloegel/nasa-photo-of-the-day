@@ -37,7 +37,7 @@
   padding: 0.8rem;
 }
 .bottomContent {
-  width: 49%;
+  width: 47.5%;
   display: flex;
 }
 .button {
@@ -103,6 +103,22 @@
 #createdBy {
   text-align: center;
 }
+.modal {
+  background-color: transparent;
+}
+.hdPopupDiv {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.popup-content {
+  margin: 0 auto;
+  background-color: transparent;
+  width: 75%;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
 @media screen and (min-width: 2000px) {
   #vid {
     min-width: 45vw;

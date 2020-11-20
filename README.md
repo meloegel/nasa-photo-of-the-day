@@ -20,9 +20,23 @@ This project was originally given to me by Lambda school and the assignment was 
 
 ## Home Page
 
+<img src="./src/styles/imgs/HomePage.PNG" width = "600" />
+
+#### Description: Home Page
+
+<br>
+
 ## Hd Image
 
+<img src="./src/styles/imgs/HDImage.PNG" width = "600" />
+
+#### Description: Clicking on an image will bring up the HD version, clicking again closes it.
+
 ## Video
+
+<img src="./src/styles/imgs/Viedo.PNG" width = "600" />
+
+#### Description: Viedos will automatically play clicking the screen will pause.
 
 ## Code Snippets
 
