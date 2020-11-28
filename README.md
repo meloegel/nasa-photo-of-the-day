@@ -6,7 +6,7 @@
 
 ## Description
 
-This project was originally given to me by Lambda school and the assignment was to build an entire app from scratch and the app includes an API call to the NASA potd (photo of the day) API. I orignally created this project in an afternoon and even comepleted a strech goal of being able to select photos from different days via date input. After completing Lambda, I decided this being one the first apps I created from scratch that I should go back and touched up the project a bit. Adding the ability to watch videos which sometimes NASA will have for thier potd And I also added the ablility to view the HD version of the photos.
+This project was originally given to me by Lambda school and the assignment was to build an entire app from scratch and the app includes an API call to the NASA potd (photo of the day) API. I originally created this project in an afternoon and even completed a stretch goal of being able to select photos from different days via date input. After completing Lambda, I decided this being one the first apps I created from scratch, I should go back and touch up the project a bit. I added the ability to watch videos, which NASA sometimes will have for thier POTD. I also added the ablility to view the HD version of the photos.
 
 ## Technologies Used
 
@@ -26,7 +26,7 @@ This project was originally given to me by Lambda school and the assignment was 
 
 <br>
 
-## Hd Image
+## HD Image
 
 <img src="./src/styles/imgs/HDImage.PNG" width = "600" />
 
@@ -36,7 +36,7 @@ This project was originally given to me by Lambda school and the assignment was 
 
 <img src="./src/styles/imgs/Viedo.PNG" width = "600" />
 
-#### Description: Viedos will automatically play clicking the screen will pause.
+#### Description: Videos will automatically play clicking the screen will pause.
 
 ## Code Snippets
 
