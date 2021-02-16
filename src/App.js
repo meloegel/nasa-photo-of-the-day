@@ -5,7 +5,7 @@ import { BASE_URL, API_KEY } from './constants';
 import nasaLogo from '../src/styles/imgs/nasa-logo.png';
 import ReactPlayer from "react-player"
 import Popup from 'reactjs-popup'
-
+import IssMap from './ISSmap';
 
 function App() {
   const moment = require('moment')
@@ -68,7 +68,7 @@ function App() {
       <div className='contentDiv'>
         <div className='bottomContent'>
           {potd.media_type === 'video' ? (
-            <ReactPlayer id='vid' playing='true' url={potd.url} alt={potd.title} />
+            <ReactPlayer id='vid' playing='false' url={potd.url} alt={potd.title} />
           ) : (
               <img id='images' onClick={setHD} src={potd.url} alt={potd.title} />
             )}
@@ -86,6 +86,7 @@ function App() {
           )}
         </Popup>
       </div>
+      {/* <IssMap /> */}
     </div>
   );
 }
