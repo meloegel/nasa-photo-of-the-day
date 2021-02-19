@@ -48,6 +48,7 @@ const IssMap = () => {
                 onLoad={() => {
                     if (!mapRef) return;
                     const map = mapRef.current.getMap();
+                    map.resize()
                     map.loadImage(boringPin, (error, image) => {
                         if (error) console.log(error);
                         map.addImage('myPin', image);
