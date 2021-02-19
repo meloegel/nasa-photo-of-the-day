@@ -16,9 +16,9 @@ const IssMap = () => {
     });
     const mapRef = useRef();
 
-    // const handleViewportChange = viewport => {
-    //     setViewport(viewport)
-    // }
+    const handleViewportChange = viewport => {
+        setViewport(viewport)
+    }
 
     let screenHeight = '60vh';
     let screenWidth = '60%';
@@ -34,7 +34,7 @@ const IssMap = () => {
     let Lat = 0
     let Lon = 0
 
-    // mapStyle="mapbox://styles/meloegel/ckfzuryk61c5z19o8pzd6o5fe"
+    // mapStyle='mapbox://styles/mapbox/streets-v11'
 
     return (
         <div className='mapbox-react'>
@@ -43,9 +43,9 @@ const IssMap = () => {
                 ref={mapRef}
                 {...viewport}
                 width={screenWidth}
-                // onViewportChange={handleViewportChange}
+                onViewportChange={handleViewportChange}
                 height={screenHeight}
-                mapStyle='mapbox://styles/mapbox/streets-v11'
+                mapStyle="mapbox://styles/meloegel/ckfzuryk61c5z19o8pzd6o5fe"
                 onLoad={() => {
                     if (!mapRef) return;
                     const map = mapRef.current.getMap();
@@ -82,10 +82,9 @@ const IssMap = () => {
                     });
                 }}
             >
-
                 <Source id="drone" type="geojson" data={geojson}>
                     <Marker longitude={Lon} latitude={Lat}><img src={ISS} alt='issMarker' /></Marker>
-                    {/* <Layer id="data" type="symbol" layout={{ 'icon-image': 'myPin', 'icon-size': 0.75 }} /> */}
+                    <Layer id="data" type="symbol" layout={{ 'icon-image': 'myPin', 'icon-size': 0.75 }} />
                 </Source>
             </ReactMapGL>;
         </div>
