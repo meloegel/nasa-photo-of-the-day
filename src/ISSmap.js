@@ -42,13 +42,12 @@ const IssMap = () => {
                 {...viewport}
                 width={screenWidth}
                 // onViewportChange={handleViewportChange}
-                style={{ margin: '0 auto' }}
+                // style={{ margin: '0 auto' }}
                 height={screenHeight}
                 mapStyle="mapbox://styles/meloegel/ckfzuryk61c5z19o8pzd6o5fe"
                 onLoad={() => {
                     if (!mapRef) return;
                     const map = mapRef.current.getMap();
-                    map.resize()
                     map.loadImage(boringPin, (error, image) => {
                         if (error) console.log(error);
                         map.addImage('myPin', image);
@@ -63,7 +62,6 @@ const IssMap = () => {
                                     featureCollection = []
                                     Lat = json.iss_position.latitude
                                     Lon = json.iss_position.longitude
-                                    console.log(Lat, Lon)
                                     featureCollection.push({
                                         type: 'Feature',
                                         geometry: {
