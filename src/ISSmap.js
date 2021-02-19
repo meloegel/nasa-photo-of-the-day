@@ -12,7 +12,7 @@ const IssMap = () => {
         longitude: 0,
         zoom: 2,
         bearing: 0,
-        pitch: 0,
+        pitch: 1,
     });
     const mapRef = useRef();
 
@@ -63,6 +63,7 @@ const IssMap = () => {
                                     featureCollection = []
                                     Lat = json.iss_position.latitude
                                     Lon = json.iss_position.longitude
+                                    console.log(Lat, Lon)
                                     featureCollection.push({
                                         type: 'Feature',
                                         geometry: {
