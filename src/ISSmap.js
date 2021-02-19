@@ -34,6 +34,8 @@ const IssMap = () => {
     let Lat = 0
     let Lon = 0
 
+    // mapStyle="mapbox://styles/meloegel/ckfzuryk61c5z19o8pzd6o5fe"
+
     return (
         <div className='mapbox-react'>
             <ReactMapGL
@@ -43,7 +45,7 @@ const IssMap = () => {
                 width={screenWidth}
                 // onViewportChange={handleViewportChange}
                 height={screenHeight}
-                mapStyle="mapbox://styles/meloegel/ckfzuryk61c5z19o8pzd6o5fe"
+                mapStyle='mapbox://styles/mapbox/streets-v11'
                 onLoad={() => {
                     if (!mapRef) return;
                     const map = mapRef.current.getMap();
