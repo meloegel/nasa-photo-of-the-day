@@ -42,7 +42,7 @@ const IssMap = () => {
                 {...viewport}
                 width={screenWidth}
                 // onViewportChange={handleViewportChange}
-                // style={{ margin: '0 auto' }}
+                style={{ margin: '0 auto' }}
                 height={screenHeight}
                 mapStyle="mapbox://styles/meloegel/ckfzuryk61c5z19o8pzd6o5fe"
                 onLoad={() => {
@@ -82,7 +82,7 @@ const IssMap = () => {
                 }}
             >
                 <Source id="drone" type="geojson" data={geojson}>
-                    <Marker longitude={Lon} latitude={Lat}><img src={ISS} alt='issMarker' /></Marker>
+                    {/* <Marker longitude={Lon} latitude={Lat}><img src={ISS} alt='issMarker' /></Marker> */}
                     <Layer id="data" type="symbol" layout={{ 'icon-image': 'myPin', 'icon-size': 0.75 }} />
                 </Source>
             </ReactMapGL>;
