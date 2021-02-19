@@ -15,9 +15,9 @@ const IssMap = () => {
     });
     const mapRef = useRef();
 
-    // const handleViewportChange = viewport => {
-    //     setViewport(viewport)
-    // }
+    const handleViewportChange = viewport => {
+        setViewport(viewport)
+    }
 
     let screenHeight = '60vh';
     let screenWidth = '60%';
@@ -42,7 +42,7 @@ const IssMap = () => {
                 ref={mapRef}
                 {...viewport}
                 width={screenWidth}
-                // onViewportChange={handleViewportChange}
+                onViewportChange={handleViewportChange}
                 height={screenHeight}
                 mapStyle="mapbox://styles/meloegel/ckfzuryk61c5z19o8pzd6o5fe"
                 onLoad={() => {
