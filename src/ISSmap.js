@@ -37,7 +37,7 @@ const IssMap = () => {
     return (
         <div>
             <ReactMapGL
-                mapboxApiAccessToken='pk.eyJ1IjoibWVsb2VnZWwiLCJhIjoiY2tmeTlnajk4MjE1bzJybXRteWViNG50dyJ9.7b-SixhDRqwlTeo0srmJ4A'
+                mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
                 ref={mapRef}
                 {...viewport}
                 width={screenWidth}
