@@ -16,9 +16,9 @@ const IssMap = () => {
     });
     const mapRef = useRef();
 
-    const handleViewportChange = viewport => {
-        setViewport(viewport)
-    }
+    // const handleViewportChange = viewport => {
+    //     setViewport(viewport)
+    // }
 
     let screenHeight = '60vh';
     let screenWidth = '60%';
@@ -43,7 +43,7 @@ const IssMap = () => {
                 ref={mapRef}
                 {...viewport}
                 width={screenWidth}
-                onViewportChange={handleViewportChange}
+                // onViewportChange={handleViewportChange}
                 height={screenHeight}
                 mapStyle="mapbox://styles/meloegel/ckfzuryk61c5z19o8pzd6o5fe"
                 onLoad={() => {
@@ -52,6 +52,7 @@ const IssMap = () => {
                     map.loadImage(boringPin, (error, image) => {
                         if (error) console.log(error);
                         map.addImage('myPin', image);
+                        map.resize();
                         var url = 'http://api.open-notify.org/iss-now.json';
                         var request = new XMLHttpRequest();
                         window.setInterval(function () {
@@ -83,8 +84,8 @@ const IssMap = () => {
                 }}
             >
                 <Source id="drone" type="geojson" data={geojson}>
-                    {/* <Marker longitude={Lon} latitude={Lat}><img src={ISS} alt='issMarker' /></Marker>
-                    <Layer id="data" type="symbol" layout={{ 'icon-image': 'myPin', 'icon-size': 0.75 }} /> */}
+                    <Marker longitude={Lon} latitude={Lat}><img src={ISS} alt='issMarker' /></Marker>
+                    <Layer id="data" type="symbol" layout={{ 'icon-image': 'myPin', 'icon-size': 0.75 }} />
                 </Source>
             </ReactMapGL>;
         </div>
