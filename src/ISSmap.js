@@ -82,9 +82,10 @@ const IssMap = () => {
                     });
                 }}
             >
+
                 <Source id="drone" type="geojson" data={geojson}>
                     <Marker longitude={Lon} latitude={Lat}><img src={ISS} alt='issMarker' /></Marker>
-                    <Layer id="data" type="symbol" layout={{ 'icon-image': 'myPin', 'icon-size': 0.75 }} />
+                    {/* <Layer id="data" type="symbol" layout={{ 'icon-image': 'myPin', 'icon-size': 0.75 }} /> */}
                 </Source>
             </ReactMapGL>;
         </div>
