@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import ReactMapGL, { Layer, Source, Marker } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import boringPin from './styles/imgs/pin.png'
 import ISS from './styles/imgs/iss.gif'
 
 
@@ -49,38 +48,34 @@ const IssMap = () => {
                 onLoad={() => {
                     if (!mapRef) return;
                     const map = mapRef.current.getMap();
-                    map.loadImage(boringPin, (error, image) => {
-                        if (error) console.log(error);
-                        map.addImage('myPin', image);
-                        map.resize();
-                        var url = 'http://api.open-notify.org/iss-now.json';
-                        var request = new XMLHttpRequest();
-                        window.setInterval(function () {
-                            request.open('GET', url, true);
-                            request.onload = function () {
-                                if (this.status >= 200 && this.status < 400) {
-                                    var json = JSON.parse(this.response);
-                                    map.getSource('drone').setData(json);
-                                    featureCollection = []
-                                    Lat = json.iss_position.latitude
-                                    Lon = json.iss_position.longitude
-                                    featureCollection.push({
-                                        type: 'Feature',
-                                        geometry: {
-                                            type: 'Point',
-                                            coordinates: [json.iss_position.longitude, json.iss_position.latitude]
-                                        }
-                                    })
-                                    map.flyTo({
-                                        center: [json.iss_position.longitude, json.iss_position.latitude],
-                                        speed: .7,
-                                        zoom: 3,
-                                    });
-                                }
-                            };
-                            request.send();
-                        }, 2000);
-                    });
+                    map.resize();
+                    var url = 'http://api.open-notify.org/iss-now.json';
+                    var request = new XMLHttpRequest();
+                    window.setInterval(function () {
+                        request.open('GET', url, true);
+                        request.onload = function () {
+                            if (this.status >= 200 && this.status < 400) {
+                                var json = JSON.parse(this.response);
+                                map.getSource('drone').setData(json);
+                                featureCollection = []
+                                Lat = json.iss_position.latitude
+                                Lon = json.iss_position.longitude
+                                featureCollection.push({
+                                    type: 'Feature',
+                                    geometry: {
+                                        type: 'Point',
+                                        coordinates: [json.iss_position.longitude, json.iss_position.latitude]
+                                    }
+                                })
+                                map.flyTo({
+                                    center: [json.iss_position.longitude, json.iss_position.latitude],
+                                    speed: .7,
+                                    zoom: 3,
+                                });
+                            }
+                        };
+                        request.send();
+                    }, 2000);
                 }}
             >
                 <Source id="drone" type="geojson" data={geojson}>
