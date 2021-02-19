@@ -43,6 +43,12 @@ h1:hover .toolTip {
   display: none;
 }
 
+.mapbox-react {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
 @media screen and (max-width: 786px) {
   body {
     height: auto;
