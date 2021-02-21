@@ -9,7 +9,7 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
     "datejs": "^1.0.0-rc3",
-    "mapbox-gl": "^2.1.1",
+    "mapbox-gl": "^1.13.0",
     "moment": "^2.25.3",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
@@ -19,7 +19,8 @@
     "react-scripts": "3.4.1",
     "reactjs-popup": "^2.0.4",
     "reactstrap": "^8.4.1",
-    "styled-components": "^5.1.0"
+    "styled-components": "^5.1.0",
+    "worker-loader": "^3.0.8"
   },
   "scripts": {
     "start": "react-scripts start",

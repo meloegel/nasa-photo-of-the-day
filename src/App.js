@@ -42,11 +42,10 @@ function App() {
       <Popup trigger={<button className="button"> About </button>} modal>
         {close => (
           <div className="aboutModal">
-            <a className="close" onClick={close}>&times;</a>
             <div className="aboutTitle"> About NASA Photo of The Day </div>
             <div className="aboutPopupDiv">
               <p className='aboutPopupContent'>NASA Photo of the Day was created using the NASA public daily photo API. Each day NASA will have a different photo or video to display. On this page, you can navigate thorough photos of the past utilizing the date selection. You can also view the photos in HD by clicking on them and you can click again to close. At the bottom of the screen there is a map live tracking the Internation Space Station. Built utilizing the NASA ISS-now api and mapbox.</p>
-              <p id='createdBy'>Created By: <a target="_blank" href='https://github.com/meloegel/nasa-photo-of-the-day'>Mark Loegel</a></p>
+              <p id='createdBy'>Created By: <a target="_blank" rel='noopener noreferrer' href='https://github.com/meloegel/nasa-photo-of-the-day'>Mark Loegel</a></p>
             </div>
             <div className="buttonPopup">
               <button className="buttonClose" onClick={() => { close(); }}>Close</button>
