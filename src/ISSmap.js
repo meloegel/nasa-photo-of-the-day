@@ -1,13 +1,7 @@
 import 'mapbox-gl/dist/mapbox-gl.css';
-import mapboxgl from 'mapbox-gl';
 import React, { useState, useRef } from 'react';
 import ReactMapGL, { Layer, Source, Marker } from 'react-map-gl';
 import ISS from './styles/imgs/iss.gif'
-
-// @ts-ignore
-// eslint-disable-next-line import/no-webpack-loader-syntax
-mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
-
 
 
 

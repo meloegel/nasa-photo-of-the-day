@@ -71,8 +71,8 @@ function App() {
           {potd.media_type === 'video' ? (
             <ReactPlayer id='vid' playing='false' url={potd.url} alt={potd.title} />
           ) : (
-              <img id='images' onClick={setHD} src={potd.url} alt={potd.title} />
-            )}
+            <img id='images' onClick={setHD} src={potd.url} alt={potd.title} />
+          )}
         </div>
         <div className='bottomContent'>
           <p className='about'>{potd.explanation} </p>
@@ -87,10 +87,10 @@ function App() {
           )}
         </Popup>
       </div>
-      {/* <div>
+      <div>
         <h3 className='issTitle'>Live Tracking The International Space Station</h3>
         <IssMap />
-      </div> */}
+      </div>
     </div>
   );
 }
